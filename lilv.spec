@@ -4,12 +4,13 @@
 Name:           lilv
 Version:        0.4.4
 Release:        %mkrel 1
-Summary:        LV2 plugin library for applications and hosts
+
 
 %define lib_major       0
 %define lib_name        %mklibname %{name} %{lib_major}
 %define lib_name_devel  %mklibname %{name} -d
 
+Summary:        LV2 plugin library for applications and hosts
 Source:         http://download.drobilla.net/%{name}-%{version}.tar.bz2
 URL:            http://drobilla.net/software/%{name}/
 License:        ISC
@@ -21,6 +22,16 @@ BuildRequires:  sord-devel
 
 %description
 LV2 plugin library for applications and hosts
+
+%files -n %{name}
+%defattr(-,root,root,-)
+%doc COPYING README
+%doc %{_mandir}/man1/lv2info.1.xz
+%doc %{_mandir}/man1/lv2ls.1.xz
+%{_bindir}/lilv-bench
+%{_bindir}/lv2info
+%{_bindir}/lv2ls
+%config(noreplace) %attr(644,root,root) %{_sysconfdir}/bash_completion.d/lilv
 
 #-----------------------------------
 %package -n %{lib_name}
@@ -36,25 +47,6 @@ significantly faster and have minimal dependencies.
 %files -n %{lib_name}
 %defattr(-,root,root,-)
 %{_libdir}/lib%{name}-%{lib_major}.so.*
-
-#-----------------------------------
-%package -n %{name}
-Summary:        Utility for the lilv LV2 library
-Group:          System/Libraries
-Requires:       %{lib_name} = %{version}-%{release}
-
-%description -n %{name}
-Utility for the suil LV2 library
-
-%files -n %{name}
-%defattr(-,root,root,-)
-%doc COPYING README
-%doc %{_mandir}/man1/lv2info.1.xz
-%doc %{_mandir}/man1/lv2ls.1.xz
-%{_bindir}/lilv-bench
-%{_bindir}/lv2info
-%{_bindir}/lv2ls
-%config(noreplace) %attr(644,root,root) %{_sysconfdir}/bash_completion.d/lilv
 
 #-----------------------------------
 %package -n %{lib_name_devel}
