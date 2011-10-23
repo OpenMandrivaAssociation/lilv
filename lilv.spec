@@ -2,7 +2,7 @@
 %define debug_package          %{nil}
 
 Name:           lilv
-Version:        0.4.4
+Version:        0.5.0
 Release:        %mkrel 1
 
 
@@ -72,7 +72,10 @@ Development files needed to build applications against lilv.
 %setup -q
 
 %build
-./waf configure --prefix=%{_prefix} --mandir=%{_mandir} --libdir=%{_libdir}
+./waf configure --prefix=%{_prefix} \
+                --mandir=%{_mandir} \
+                --libdir=%{_libdir} \
+                --configdir=%{_sysconfdir}
 ./waf
 
 %install
