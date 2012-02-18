@@ -3,7 +3,7 @@
 
 Name:           lilv
 Version:        0.5.0
-Release:        %mkrel 1
+Release:        2
 
 
 %define lib_major       0
@@ -12,6 +12,7 @@ Release:        %mkrel 1
 
 Summary:        LV2 plugin library for applications and hosts
 Source:         http://download.drobilla.net/%{name}-%{version}.tar.bz2
+Patch0:			lilv-0.5.0-fix-decl.patch
 URL:            http://drobilla.net/software/%{name}/
 License:        ISC
 Group:          System/Libraries
@@ -70,6 +71,7 @@ Development files needed to build applications against lilv.
 #-----------------------------------
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 ./waf configure --prefix=%{_prefix} \
