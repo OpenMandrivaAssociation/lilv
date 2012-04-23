@@ -68,7 +68,6 @@ Development files needed to build applications against lilv.
 #-----------------------------------
 %prep
 %setup -q
-%patch0 -p0
 
 %build
 ./waf configure --prefix=%{_prefix} \
