@@ -2,8 +2,8 @@
 %define debug_package          %{nil}
 
 Name:           lilv
-Version:        0.5.0
-Release:        2
+Version:        0.14.2
+Release:        1
 
 
 %define lib_major       0
@@ -11,7 +11,7 @@ Release:        2
 %define lib_name_devel  %mklibname %{name} -d
 
 Summary:        LV2 plugin library for applications and hosts
-Source:         http://download.drobilla.net/%{name}-%{version}.tar.bz2
+Source0:         http://download.drobilla.net/%{name}-%{version}.tar.bz2
 Patch0:			lilv-0.5.0-fix-decl.patch
 URL:            http://drobilla.net/software/%{name}/
 License:        ISC
@@ -25,7 +25,6 @@ BuildRequires:  sord-devel
 LV2 plugin library for applications and hosts
 
 %files -n %{name}
-%defattr(-,root,root,-)
 %doc COPYING README
 %doc %{_mandir}/man1/lv2info.1.xz
 %doc %{_mandir}/man1/lv2ls.1.xz
@@ -46,7 +45,6 @@ for applications. Lilv is the successor to SLV2, rewritten to be
 significantly faster and have minimal dependencies.
 
 %files -n %{lib_name}
-%defattr(-,root,root,-)
 %{_libdir}/lib%{name}-%{lib_major}.so.*
 
 #-----------------------------------
@@ -61,7 +59,6 @@ Provides:       %{name}-devel = %{version}-%{release}
 Development files needed to build applications against lilv.
 
 %files -n %{lib_name_devel}
-%defattr(-,root,root,-)
 %{_libdir}/lib%{name}-%{lib_major}.so
 %dir %{_includedir}/%{name}-%{lib_major}/%{name}
 %{_includedir}/%{name}-%{lib_major}/%{name}/*.h
@@ -81,10 +78,5 @@ Development files needed to build applications against lilv.
 ./waf
 
 %install
-rm -rf %{buildroot}
 
 ./waf install --destdir=%{buildroot}
-
-%clean
-rm -rf %{buildroot}
-
