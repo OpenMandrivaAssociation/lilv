@@ -12,14 +12,15 @@ Release:        1
 
 Summary:        LV2 plugin library for applications and hosts
 Source0:         http://download.drobilla.net/%{name}-%{version}.tar.bz2
-Patch0:			lilv-0.5.0-fix-decl.patch
+Patch0:		lilv-0.5.0-fix-decl.patch
 URL:            http://drobilla.net/software/%{name}/
 License:        ISC
 Group:          System/Libraries
 
 BuildRequires:  waf, pkgconfig, python
-BuildRequires:  lv2core-devel >= 0.4
 BuildRequires:  sord-devel
+BuildRequires:  pkgconfig(lv2)
+BuildRequires:  sratom-devel
 
 %description
 LV2 plugin library for applications and hosts
