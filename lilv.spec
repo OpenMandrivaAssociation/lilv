@@ -2,7 +2,7 @@
 %define debug_package          %{nil}
 
 Name:           lilv
-Version:        0.14.2
+Version:        0.14.4
 Release:        1
 
 
@@ -11,8 +11,8 @@ Release:        1
 %define lib_name_devel  %mklibname %{name} -d
 
 Summary:        LV2 plugin library for applications and hosts
-Source0:         http://download.drobilla.net/%{name}-%{version}.tar.bz2
-Patch0:		lilv-0.5.0-fix-decl.patch
+Source0:        http://download.drobilla.net/%{name}-%{version}.tar.bz2
+Patch0:         lilv-0.5.0-fix-decl.patch
 URL:            http://drobilla.net/software/%{name}/
 License:        ISC
 Group:          System/Libraries
@@ -32,6 +32,7 @@ LV2 plugin library for applications and hosts
 %{_bindir}/lilv-bench
 %{_bindir}/lv2info
 %{_bindir}/lv2ls
+%{_bindir}/lv2bench
 %config(noreplace) %attr(644,root,root) %{_sysconfdir}/bash_completion.d/lilv
 
 #-----------------------------------
