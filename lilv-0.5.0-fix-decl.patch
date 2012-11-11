@@ -1,0 +1,14 @@
+--- lilv/lilvmm.hpp	2012-02-18 09:41:13.228056790 +0100
++++ lilv/lilvmm.hpp	2012-02-18 09:43:26.478977441 +0100
+@@ -21,7 +21,10 @@
+ 
+ namespace Lilv {
+ 
+-const char* uri_to_path(const char* uri) { return lilv_uri_to_path(uri); }
++static inline const char*
++uri_to_path(const char* uri) {
++	return lilv_uri_to_path(uri);
++}
+ 
+ #define LILV_WRAP0(RT, prefix, name) \
+ 	inline RT name() { return lilv_ ## prefix ## _ ## name (me); }
