@@ -81,3 +81,30 @@ Development files needed to build applications against lilv.
 %install
 
 ./waf install --destdir=%{buildroot}
+
+
+%changelog
+* Sat Aug 25 2012 Frank Kober <emuse@mandriva.org> 0.14.4-1
++ Revision: 815733
+- new version 0.14.4
+
+* Mon Apr 23 2012 Alexander Khrukin <akhrukin@mandriva.org> 0.14.2-1
++ Revision: 792972
+- BR:sratom-devel
+- Reversed (or previously applied) patch detected
+- version update 0.14.2
+
+* Sat Feb 18 2012 Frank Kober <emuse@mandriva.org> 0.5.0-2
++ Revision: 776758
+- add patch for fixing a double declaration
+  o reported on drobilla's website ticket 777
+
+* Sun Oct 23 2011 Frank Kober <emuse@mandriva.org> 0.5.0-1
++ Revision: 705726
+- new version 0.5.0
+  o sysconfdir flag added to waf configure
+
+* Sat Jun 25 2011 Frank Kober <emuse@mandriva.org> 0.4.4-1
++ Revision: 687118
+- imported package lilv
+
