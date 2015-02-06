@@ -3,7 +3,7 @@
 
 Name:           lilv
 Version:        0.14.4
-Release:        1
+Release:        2
 
 
 %define lib_major       0
