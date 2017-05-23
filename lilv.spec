@@ -17,6 +17,7 @@ Group:          System/Libraries
 BuildRequires:  waf, pkgconfig, python
 BuildRequires:  sord-devel
 BuildRequires:  pkgconfig(lv2)
+BuildRequires:  pkgconfig(sndfile)
 BuildRequires:  sratom-devel
 
 %description
