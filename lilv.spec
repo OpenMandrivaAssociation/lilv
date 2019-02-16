@@ -5,8 +5,8 @@
 %define lib_name_devel  %mklibname %{name} -d
 
 Name:           lilv
-Version:        0.24.2
-Release:        2
+Version:        0.24.4
+Release:        1
 Summary:        LV2 plugin library for applications and hosts
 Source0:        http://download.drobilla.net/%{name}-%{version}.tar.bz2
 Patch0:         lilv-0.5.0-fix-decl.patch
