@@ -73,13 +73,12 @@ Development files needed to build applications against lilv.
 sed -i -e 's/^.*run_ldconfig/#\0/' wscript
 
 %build
-%{__python2} ./waf configure --prefix=%{_prefix} \
+python ./waf configure --prefix=%{_prefix} \
 		CC=%{__cc} \
                 --mandir=%{_mandir} \
                 --libdir=%{_libdir} \
                 --configdir=%{_sysconfdir}
-%{__python2} ./waf
+python ./waf
 
 %install
-
-%{__python2} ./waf install --destdir=%{buildroot}
+python ./waf install --destdir=%{buildroot}
