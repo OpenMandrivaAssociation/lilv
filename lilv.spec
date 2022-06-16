@@ -80,7 +80,6 @@ This package contains the python libraries for %{name}.
 
 %files -n python-%{name}
 %{python_sitelib}/%{name}.*
-%{python_sitelib}/__pycache__/*
 
 %prep
 %autosetup -p1
