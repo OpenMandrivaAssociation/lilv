@@ -30,7 +30,7 @@ LV2 plugin library for applications and hosts.
 %doc %{_mandir}/man1/lv2info.1.*
 %doc %{_mandir}/man1/lv2ls.1.*
 %doc %{_mandir}/man1/lv2apply.1.*
-%{_bindir}/lilv-bench
+#{_bindir}/lilv-bench
 %{_bindir}/lv2info
 %{_bindir}/lv2ls
 %{_bindir}/lv2bench
