@@ -87,7 +87,7 @@ This package contains the python libraries for %{name}.
 %autosetup -p1
 
 %build
-%meson
+%meson -Ddocs=disabled
 %meson_build
 
 %install
