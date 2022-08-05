@@ -13,6 +13,7 @@ License:	ISC
 Group:		System/Libraries
 URL:		http://drobilla.net/software/%{name}/
 Source0:	http://download.drobilla.net/%{name}-%{version}.tar.xz
+BuildRequires:  doxygen
 BuildRequires:	meson
 BuildRequires:	python
 BuildRequires:	sord-devel
