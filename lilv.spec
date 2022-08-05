@@ -20,6 +20,7 @@ BuildRequires:	sord-devel
 BuildRequires:	pkgconfig(lv2)
 BuildRequires:	pkgconfig(sndfile)
 BuildRequires:	sratom-devel
+BuildRequires:  python3dist(sphinx)
 
 %description
 LV2 plugin library for applications and hosts.
