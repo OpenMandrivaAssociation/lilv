@@ -7,18 +7,20 @@
 
 Summary:	LV2 plugin library for applications and hosts
 Name:		lilv
-Version:	0.24.14
-Release:	2
+Version:	0.24.16
+Release:	1
 License:	ISC
 Group:		System/Libraries
 URL:		http://drobilla.net/software/%{name}/
-Source0:	http://download.drobilla.net/%{name}-%{version}.tar.bz2
-BuildRequires:	waf
+Source0:	http://download.drobilla.net/%{name}-%{version}.tar.xz
+BuildRequires:  doxygen
+BuildRequires:	meson
 BuildRequires:	python
 BuildRequires:	sord-devel
 BuildRequires:	pkgconfig(lv2)
 BuildRequires:	pkgconfig(sndfile)
 BuildRequires:	sratom-devel
+BuildRequires:  python3dist(sphinx)
 
 %description
 LV2 plugin library for applications and hosts.
@@ -28,7 +30,7 @@ LV2 plugin library for applications and hosts.
 %doc %{_mandir}/man1/lv2info.1.*
 %doc %{_mandir}/man1/lv2ls.1.*
 %doc %{_mandir}/man1/lv2apply.1.*
-%{_bindir}/lilv-bench
+%doc %{_mandir}/man1/lv2bench.1.*
 %{_bindir}/lv2info
 %{_bindir}/lv2ls
 %{_bindir}/lv2bench
@@ -83,15 +85,10 @@ This package contains the python libraries for %{name}.
 
 %prep
 %autosetup -p1
-sed -i -e 's/^.*run_ldconfig/#\0/' wscript
 
 %build
-python ./waf configure --prefix=%{_prefix} CC=%{__cc} \
-	--mandir=%{_mandir} \
-	--libdir=%{_libdir} \
-	--configdir=%{_sysconfdir}
-
-python ./waf
+%meson -Ddocs=disabled
+%meson_build
 
 %install
-python ./waf install --destdir=%{buildroot}
+%meson_install
