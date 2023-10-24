@@ -7,8 +7,8 @@
 
 Summary:	LV2 plugin library for applications and hosts
 Name:		lilv
-Version:	0.24.20
-Release:	2
+Version:	0.24.22
+Release:	1
 License:	ISC
 Group:		System/Libraries
 URL:		http://drobilla.net/software/%{name}/
@@ -82,6 +82,7 @@ This package contains the python libraries for %{name}.
 
 %files -n python-%{name}
 %{python_sitelib}/%{name}.*
+%{python_sitelib}/__pycache__/lilv.cpython-*.pyc
 
 %prep
 %autosetup -p1
