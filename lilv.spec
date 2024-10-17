@@ -11,7 +11,7 @@ Version:	0.24.24
 Release:	1
 License:	ISC
 Group:		System/Libraries
-URL:		http://drobilla.net/software/%{name}/
+URL:		https://drobilla.net/software/%{name}/
 Source0:	http://download.drobilla.net/%{name}-%{version}.tar.xz
 BuildRequires:  doxygen
 BuildRequires:	meson
