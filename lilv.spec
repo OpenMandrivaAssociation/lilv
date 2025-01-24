@@ -7,7 +7,7 @@
 
 Summary:	LV2 plugin library for applications and hosts
 Name:		lilv
-Version:	0.24.24
+Version:	0.24.26
 Release:	1
 License:	ISC
 Group:		System/Libraries
@@ -16,10 +16,10 @@ Source0:	http://download.drobilla.net/%{name}-%{version}.tar.xz
 BuildRequires:  doxygen
 BuildRequires:	meson
 BuildRequires:	python
-BuildRequires:	sord-devel
+BuildRequires:	pkgconfig(sord-0)
 BuildRequires:	pkgconfig(lv2)
 BuildRequires:	pkgconfig(sndfile)
-BuildRequires:	sratom-devel
+BuildRequires:	pkgconfig(sratom-0)
 BuildRequires:  python3dist(sphinx)
 
 %description
