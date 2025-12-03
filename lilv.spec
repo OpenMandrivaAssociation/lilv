@@ -7,7 +7,7 @@
 
 Summary:	LV2 plugin library for applications and hosts
 Name:		lilv
-Version:	0.26.0
+Version:	0.26.2
 Release:	1
 License:	ISC
 Group:		System/Libraries
