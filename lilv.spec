@@ -7,8 +7,8 @@
 
 Summary:	LV2 plugin library for applications and hosts
 Name:		lilv
-Version:	0.26.2
-Release:	2
+Version:	0.28.0
+Release:	1
 License:	ISC
 Group:		System/Libraries
 URL:		https://drobilla.net/software/%{name}/
